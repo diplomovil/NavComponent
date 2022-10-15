@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/datosFragment">
+
+    <fragment
+        android:id="@+id/datosFragment"
+        android:name="com.amaurypm.navcomponent.view.fragments.DatosFragment"
+        android:label="fragment_datos"
+        tools:layout="@layout/fragment_datos" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/formularioFragment"
+        android:name="com.amaurypm.navcomponent.view.fragments.FormularioFragment"
+        android:label="fragment_formulario"
+        tools:layout="@layout/fragment_formulario" >
+        <action
+            android:id="@+id/action_formularioFragment_to_datosFragment"
+            app:destination="@id/datosFragment" />
+    </fragment>
+</navigation>
