@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/datosFragment">
+    app:startDestination="@id/formularioFragment">
 
     <fragment
         android:id="@+id/datosFragment"
@@ -11,6 +11,19 @@
         android:label="fragment_datos"
         tools:layout="@layout/fragment_datos" >
 
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue='""' />
+        <argument
+            android:name="mobile"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <argument
+            android:name="usuario"
+            app:argType="com.amaurypm.navcomponent.model.Usuario"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/formularioFragment"
